@@ -120,7 +120,7 @@ brother_of(X,Y):- male(X),
 aunt_of(X,Y):- female(X),
     parent_of(Z,Y), sister_of(Z,X),!.
 uncle_of(X,Y):-
-    parent_of(Z,Y), brother_of(Z,X).
+    parent_of(Z,Y), brother_of(Z,X),!.
 
 ancestor_of(X,Y):- parent_of(X,Y).
 ancestor_of(X,Y):- parent_of(X,Z),
